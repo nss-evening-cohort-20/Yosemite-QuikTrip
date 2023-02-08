@@ -13,13 +13,17 @@ namespace Yosemite_QuikTrip
 
         public double RetailSales { get; set; }
 
-        public Employee(string name, string employeeTitle, double retailSales)
+        public int EmployeeStoreNumber { get; set; }
+
+        public Employee(string name, string employeeTitle, double retailSales, int employeeStoreNumber)
         {
             EmployeeName = name;
             EmployeeTitle = employeeTitle;
             RetailSales = retailSales;
+            EmployeeStoreNumber = employeeStoreNumber;
         }
 
+       public Stores Store { get; set; }
         public void DisplayEmployee() 
         {
             Console.WriteLine(@"Employee Name: " + EmployeeName,

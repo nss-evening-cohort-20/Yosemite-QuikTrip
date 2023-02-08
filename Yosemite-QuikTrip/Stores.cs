@@ -8,7 +8,7 @@ namespace Yosemite_QuikTrip
 {
     internal class Stores
     {
-        public Stores(int storeNumber, string storeManager, string assistantManager,
+        public Stores(int storeNumber, Employee storeManager, Employee assistantManager,
            double storeManagerRetailSales, double assistantManagerRetailSales
        )
         {
@@ -25,14 +25,14 @@ namespace Yosemite_QuikTrip
         }
 
         public int StoreNumber { get; set; }
-        public string StoreManager { get; set; }
-        public string AssistantManager { get; set; }
+        public Employee StoreManager { get; set; }
+        public Employee AssistantManager { get; set; }
         public double StoreRetailSales { get; set; }
         public double AssistantRetailSales { get; set; }
 
         public string DistrictName { get; set; }
         public static List<Employee> Employees { get; set; } = new List<Employee>();
-        public static List<GasRecord> GasRecords { get; set; } = new List<GasRecord>();
+        //public static List<GasRecord> GasRecords { get; set; } = new List<GasRecord>();
 
 
 
