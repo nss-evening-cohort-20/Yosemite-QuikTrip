@@ -1,10 +1,6 @@
-﻿using Yosemite_QuikTrip;
-Menu menu= new Menu();
+﻿using Yosemite_QuikTrip; 
 
-menu.Show();
-menu.ToString();    
-menu.ShowDistricts();
-menu.Exit();
+MainMenu menu = new MainMenu();
 
-
+menu.Render();
 
