@@ -18,8 +18,8 @@ namespace Yosemite_QuikTrip
             StoreNumber = storeNumber;
             StoreManager = EmployeeRepository.GetByName(storeManager);
             AssistantManager = EmployeeRepository.GetByName(assistantManager);
-            StoreRetailSales = EmployeeRepository.GetManagerRetailSales(storeManagerRetailSales);
-            AssistantRetailSales = EmployeeRepository.GetAsstiantRetailSales(assistantManagerRetailSales);
+            //StoreRetailSales = EmployeeRepository.GetManagerRetailSales(storeManagerRetailSales);
+            //AssistantRetailSales = EmployeeRepository.GetAsstiantRetailSales(assistantManagerRetailSales);
 
             
         }

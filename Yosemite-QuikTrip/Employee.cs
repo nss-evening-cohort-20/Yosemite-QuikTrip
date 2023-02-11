@@ -23,6 +23,8 @@ namespace Yosemite_QuikTrip
             EmployeeStoreNumber = employeeStoreNumber;
         }
 
+        public Employee() { }
+
        public Stores Store { get; set; }
         public void DisplayEmployee() 
         {

@@ -9,7 +9,7 @@ namespace Yosemite_QuikTrip
         public string districtManager;
 
         List<string> stores = new List<string>();
-        Stores.Add(123);
+        
 
 
 

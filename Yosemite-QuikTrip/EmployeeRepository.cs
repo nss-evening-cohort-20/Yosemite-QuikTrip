@@ -19,15 +19,15 @@ namespace Yosemite_QuikTrip
             return Employees.Find(e => e.EmployeeName == name);
         }
         
-        public static Employee GetManagerRetailSales(double sales) 
-        {
-            return Employees.Find(s => s.ManagerRetailSales == sales);
-        }
+        //public static Employee GetManagerRetailSales(double sales) 
+        //{
+        //    return Employees.Find(s => s.ManagerRetailSales == sales);
+        //}
 
-        public static Employee GetAsstiantRetailSales(double aSales)
-        {
-            return Employees.Find(a => a.AssistantRetailSales == aSales );
-        }
+        //public static Employee GetAsstiantRetailSales(double aSales)
+        //{
+        //    return Employees.Find(a => a.AssistantRetailSales == aSales );
+        //}
 
 
     }
