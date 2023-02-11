@@ -45,19 +45,6 @@ Title:{Title}
     }
 
 
-<<<<<<< HEAD
-        public Employee() { }
-
-       public Stores Store { get; set; }
-        public void DisplayEmployee() 
-        {
-            Console.WriteLine(@"Employee Name: " + EmployeeName,
-                "Employee Title: " + EmployeeTitle,
-                "Retail sales" + RetailSales);
-        }
-            }
-=======
->>>>>>> 9196728035dc5de21d6e9fa322859404fb7fb7d7
 }
 
 

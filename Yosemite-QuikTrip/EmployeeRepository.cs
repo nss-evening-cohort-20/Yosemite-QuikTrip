@@ -8,20 +8,6 @@ namespace Yosemite_QuikTrip
 
         public List<Employee> GetEmployees()
         {
-<<<<<<< HEAD
-            return Employees.Find(e => e.EmployeeName == name);
-        }
-        
-        //public static Employee GetManagerRetailSales(double sales) 
-        //{
-        //    return Employees.Find(s => s.ManagerRetailSales == sales);
-        //}
-
-        //public static Employee GetAsstiantRetailSales(double aSales)
-        //{
-        //    return Employees.Find(a => a.AssistantRetailSales == aSales );
-        //}
-=======
             return _employees;
         }
 
@@ -59,7 +45,6 @@ Store: {newEmployee.Store}");
             Console.Write("Press enter to exit.");
             Console.ReadLine();
         }
->>>>>>> 9196728035dc5de21d6e9fa322859404fb7fb7d7
 
         public void UpdateEmployee(Employee employee)
         {
