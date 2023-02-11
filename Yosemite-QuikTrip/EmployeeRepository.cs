@@ -1,21 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace Yosemite_QuikTrip
 {
     internal class EmployeeRepository
     {
-        public static List<Employee> Employees {get; set;} = new List<Employee>() 
-        {
-            new Employee {EmployeeName = "Brian", EmployeeTitle = "Manager"}
-            
-        };
+        static List<Employee> _employees = new List<Employee>();
 
-        public static Employee GetByName(string name)
+        public List<Employee> GetEmployees()
         {
+<<<<<<< HEAD
             return Employees.Find(e => e.EmployeeName == name);
         }
         
@@ -28,7 +21,63 @@ namespace Yosemite_QuikTrip
         //{
         //    return Employees.Find(a => a.AssistantRetailSales == aSales );
         //}
+=======
+            return _employees;
+        }
+
+        public void SaveNewEmployee()
+        {
+            Console.Clear();
+
+            Employee newEmployee = new Employee(0, "", "", "", 0, "");
+
+            Console.Write("Employee Id: ");
+            newEmployee.Id = int.Parse(Console.ReadLine());
+
+            Console.Write("Employee FristName: ");
+            newEmployee.FristName = Console.ReadLine();
+
+            Console.Write("Employee LastName: ");
+            newEmployee.LastName = Console.ReadLine();
+
+            Console.Write("Employee Title: ");
+            newEmployee.Title = Console.ReadLine();
+
+            Console.Write("Employee Store: ");
+            newEmployee.Store = int.Parse(Console.ReadLine());
 
 
+            Console.Write("Employee District: ");
+            newEmployee.District = Console.ReadLine();
+            _employees.Add(newEmployee);
+
+            Console.WriteLine(@$"Employee {newEmployee.FristName} {newEmployee.LastName} added to database!
+Title: {newEmployee.Title}
+District: {newEmployee.District}
+Store: {newEmployee.Store}");
+
+            Console.Write("Press enter to exit.");
+            Console.ReadLine();
+        }
+>>>>>>> 9196728035dc5de21d6e9fa322859404fb7fb7d7
+
+        public void UpdateEmployee(Employee employee)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveEmployee()
+        {
+            Console.Write("Enter Employee Id to remove: ");
+
+            int id = int.Parse(Console.ReadLine());
+            Employee foundEmployeet = _employees.FirstOrDefault(d => d.Id == id);
+            _employees.Remove(foundEmployeet);
+
+            Console.WriteLine($"Employee #{id} was removed from database.");
+
+            Console.Write("Press enter to exit.");
+            Console.ReadLine();
+        }
     }
 }
