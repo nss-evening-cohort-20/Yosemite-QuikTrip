@@ -10,7 +10,8 @@ namespace Yosemite_QuikTrip
 {
     public class MainMenu
     {
-        bool breakWhileLoop = true;
+        readonly DistrictMenu districtMenu = new DistrictMenu();
+
         private enum MenuOptions
         {
             None,            
@@ -22,6 +23,7 @@ namespace Yosemite_QuikTrip
         }
         public void Render()
         {
+        bool breakWhileLoop = true;
             while(breakWhileLoop)
             {
                 MenuOptions currentOption = MenuOptions.None;
@@ -40,7 +42,7 @@ namespace Yosemite_QuikTrip
                 Console.WriteLine();
 
                 Console.WriteLine( stringBuilder.ToString().Replace('_', ' ') );
-
+                Console.Write("Please Select An Option:");
                 string userInput = Console.ReadLine();
 
                 MenuOptions userPickedOption = (MenuOptions)int.Parse(userInput);
@@ -57,6 +59,7 @@ namespace Yosemite_QuikTrip
                     case MenuOptions.Add_New_Employee:
                         break;
                     case MenuOptions.Add_A_Store_Or_District:
+                        districtMenu.RenderDistrictMenu();
                         break;
                     case MenuOptions.Exit:
                         Exit();
