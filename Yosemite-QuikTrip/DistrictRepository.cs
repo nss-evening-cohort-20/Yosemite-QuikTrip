@@ -4,10 +4,10 @@ public class DistrictRepository
     // we're using a static list here instead of a proper database
     // but the general idea still holds up once we cover databases
     // it's just another piece of code to replace and refactor nbd
-    static List<District> _districts = new List<District>();
+        static List<District> _districts = new List<District>();
 
-    public List<District> GetDistricts()
-    {
+        public List<District> GetDistricts()
+        {
         return _districts;
     }
 
@@ -38,12 +38,12 @@ Sales: {newDistrict.Sales}
 
         Console.Write("Press enter to exit.");
         Console.ReadLine();
-    }
+        }
 
     public void UpdateDistrict(District district)
-    {
-        throw new NotImplementedException();
-    }
+        {
+            throw new NotImplementedException();
+        }
 
     public void RemoveDistrict()
     {

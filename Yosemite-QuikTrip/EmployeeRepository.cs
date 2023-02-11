@@ -1,65 +1,68 @@
-﻿namespace Yosemite_QuikTrip;
+﻿
 
-internal class EmployeeRepository
+namespace Yosemite_QuikTrip
 {
-    static List<Employee> _employees = new List<Employee>();
-
-    public List<Employee> GetEmployees()
+    internal class EmployeeRepository
     {
-        return _employees;
-    }
+        static List<Employee> _employees = new List<Employee>();
 
-    public void SaveNewEmployee()
-    {
-        Console.Clear();
+        public List<Employee> GetEmployees()
+        {
+            return _employees;
+        }
 
-        Employee newEmployee = new Employee(0, "", "", "", 0, "");
+        public void SaveNewEmployee()
+        {
+            Console.Clear();
 
-        Console.Write("Employee Id: ");
-        newEmployee.Id = int.Parse(Console.ReadLine());
+            Employee newEmployee = new Employee(0, "", "", "", 0, "");
 
-        Console.Write("Employee FristName: ");
-        newEmployee.FristName = Console.ReadLine();
+            Console.Write("Employee Id: ");
+            newEmployee.Id = int.Parse(Console.ReadLine());
 
-        Console.Write("Employee LastName: ");
-        newEmployee.LastName = Console.ReadLine();
+            Console.Write("Employee FristName: ");
+            newEmployee.FristName = Console.ReadLine();
 
-        Console.Write("Employee Title: ");
-        newEmployee.Title = Console.ReadLine();
+            Console.Write("Employee LastName: ");
+            newEmployee.LastName = Console.ReadLine();
 
-        Console.Write("Employee Store: ");
-        newEmployee.Store = int.Parse(Console.ReadLine());
+            Console.Write("Employee Title: ");
+            newEmployee.Title = Console.ReadLine();
+
+            Console.Write("Employee Store: ");
+            newEmployee.Store = int.Parse(Console.ReadLine());
 
 
-        Console.Write("Employee District: ");
-        newEmployee.District = Console.ReadLine();
-        _employees.Add(newEmployee);
+            Console.Write("Employee District: ");
+            newEmployee.District = Console.ReadLine();
+            _employees.Add(newEmployee);
 
-        Console.WriteLine(@$"Employee {newEmployee.FristName} {newEmployee.LastName} added to database!
+            Console.WriteLine(@$"Employee {newEmployee.FristName} {newEmployee.LastName} added to database!
 Title: {newEmployee.Title}
 District: {newEmployee.District}
 Store: {newEmployee.Store}");
 
-        Console.Write("Press enter to exit.");
-        Console.ReadLine();
-    }
+            Console.Write("Press enter to exit.");
+            Console.ReadLine();
+        }
 
-    public void UpdateEmployee(Employee employee)
-    {
-        throw new NotImplementedException();
-    }
+        public void UpdateEmployee(Employee employee)
+        {
+            throw new NotImplementedException();
+        }
 
-    public void RemoveEmployee()
-    {
-        Console.Write("Enter Employee Id to remove: ");
+        public void RemoveEmployee()
+        {
+            Console.Write("Enter Employee Id to remove: ");
 
-        int id = int.Parse(Console.ReadLine());
-        Employee foundEmployeet = _employees.FirstOrDefault(d => d.Id == id);
-        _employees.Remove(foundEmployeet);
+            int id = int.Parse(Console.ReadLine());
+            Employee foundEmployeet = _employees.FirstOrDefault(d => d.Id == id);
+            _employees.Remove(foundEmployeet);
 
-        Console.WriteLine($"Employee #{id} was removed from database.");
+            Console.WriteLine($"Employee #{id} was removed from database.");
 
-        Console.Write("Press enter to exit.");
-        Console.ReadLine();
+            Console.Write("Press enter to exit.");
+            Console.ReadLine();
+        }
     }
 }
