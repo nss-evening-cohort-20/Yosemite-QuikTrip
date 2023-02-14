@@ -1,40 +1,32 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
+﻿namespace Yosemite_QuikTrip;
 
-//namespace Yosemite_QuikTrip
-//{
-//    internal class Stores
-//    {
-//        public Stores(int storeNumber, string storeManager, string assistantManager,
-//           double storeManagerRetailSales, double assistantManagerRetailSales
-//       )
-//        {
-//            StoreNumber = storeNumber;
-//            StoreManager = storeManager;
-//            AssistantManager = assistantManager;
-//            StoreRetailSales = storeManagerRetailSales;
-//            AssistantRetailSales = assistantManagerRetailSales;
-//        }
-//        public Stores(int storeNumber, string districtName)
-//        {
-//            StoreNumber = storeNumber;
-//            DistrictName = districtName;
-//        }
-
-//        public int StoreNumber { get; set; }
-//        public string StoreManager { get; set; }
-//        public string AssistantManager { get; set; }
-//        public double StoreRetailSales { get; set; }
-//        public double AssistantRetailSales { get; set; }
-
-//        public string DistrictName { get; set; }
-//        public static List<Employee> Employees { get; set; } = new List<Employee>();
-//        public static List<GasRecord> GasRecords { get; set; } = new List<GasRecord>();
+public class Stores
+{
+    ////District
+    //list of stores
+    //district manager
+    //inherit from employee (override retail sales)
+    //district name
+    //district sales -- totals store sales
 
 
 
-//    }
-//}
+    //Public Properties//
+    public string Manager { get; set; }
+
+    public string Name { get; set; }
+
+    public int Sales { get; set; }
+
+    //Constructor Method//
+    public Stores(string storeName, string storeManager, int storeSales)
+    {
+        Name = storeName;
+        Manager = storeManager;
+        Sales = storeSales;
+    }
+
+
+}
+
+

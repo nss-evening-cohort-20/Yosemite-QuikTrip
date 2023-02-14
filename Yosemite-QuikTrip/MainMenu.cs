@@ -11,6 +11,7 @@ namespace Yosemite_QuikTrip
     public class MainMenu
     {
         readonly DistrictMenu districtMenu = new DistrictMenu();
+        readonly EmployeeRepository employeeRepository= new EmployeeRepository();
 
         private enum MenuOptions
         {
@@ -57,6 +58,7 @@ namespace Yosemite_QuikTrip
                     case MenuOptions.Generate_District_Report:
                         break;
                     case MenuOptions.Add_New_Employee:
+                        employeeRepository.SaveNewEmployee();
                         break;
                     case MenuOptions.Add_A_Store_Or_District:
                         districtMenu.RenderDistrictMenu();

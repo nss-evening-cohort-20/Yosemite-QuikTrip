@@ -2,7 +2,7 @@
 
 namespace Yosemite_QuikTrip
 {
-    internal class EmployeeRepository
+    public class EmployeeRepository
     {
         static List<Employee> _employees = new List<Employee>();
 
@@ -17,8 +17,10 @@ namespace Yosemite_QuikTrip
 
             Employee newEmployee = new Employee(0, "", "", "", 0, "");
 
-            Console.Write("Employee Id: ");
-            newEmployee.Id = int.Parse(Console.ReadLine());
+           
+            Console.Write("Employee Id: ");    
+            newEmployee.Id = int.Parse(Console.ReadLine()); 
+         
 
             Console.Write("Employee FristName: ");
             newEmployee.FristName = Console.ReadLine();
@@ -29,9 +31,10 @@ namespace Yosemite_QuikTrip
             Console.Write("Employee Title: ");
             newEmployee.Title = Console.ReadLine();
 
-            Console.Write("Employee Store: ");
+            Console.Write("Employee Store Number: ");
             newEmployee.Store = int.Parse(Console.ReadLine());
-
+            string input2 = Console.ReadLine();
+            newEmployee.Store =newEmployee.NumberValidation(input2);  
 
             Console.Write("Employee District: ");
             newEmployee.District = Console.ReadLine();
